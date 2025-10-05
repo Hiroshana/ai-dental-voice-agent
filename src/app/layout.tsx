@@ -21,9 +21,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DentAI - AI Powered Dental Assistant",
-  description:
-    "Get instant dental advice through voice calls with our AI assistant",
+  title: "Smilo - AI Powered Dental Assistant",
+  description: "AI Receptionist for Dental Clinics",
 };
 
 export default function RootLayout({
@@ -32,7 +31,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+      appearance={{
+        variables: {
+          colorPrimary: "#1e9df1",
+          colorBackground: "#ffffff",
+        },
+      }}
+    >
       <html lang="en">
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
